@@ -1,8 +1,9 @@
 @import 'tailwindcss';
+@import 'tailwind-animations';
 
 @theme {
-	--color-gold: hsl(39, 89%, 49%);
-	--color-gold-b: hsl(28, 76%, 44%);
+	--color-primary: hsl(39, 89%, 49%);
+	--color-primary-b: hsl(28, 76%, 44%);
 	--color-blue: hsl(230, 89%, 62%);
 	--color-blue-b: hsl(229, 64%, 46%);
 	--color-red: hsl(349, 71%, 52%);
