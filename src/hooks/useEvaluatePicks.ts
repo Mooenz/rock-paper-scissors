@@ -5,12 +5,13 @@ const useEvaluatePicks = () => {
 	const setElementWin = useGameStore((state) => state.setElementWin);
 
 	const evaluatePicks = (playerPick: TypeOptions, housePick: TypeOptions) => {
-		if (playerPick?.defeats === housePick?.name) {
+
+		if (playerPick?.defeats.includes(housePick?.name)) {
 			setElementWin(playerPick.name);
 			return 'Win';
 		}
 
-		if (housePick?.defeats === playerPick?.name) {
+		if (housePick?.defeats.includes(playerPick?.name)) {
 			setElementWin(housePick.name);
 			return 'Lose';
 		}
