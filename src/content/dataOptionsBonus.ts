@@ -6,17 +6,15 @@ const optionsBonus: TypeOptions[] = [
 	{
 		id: 4,
 		name: 'lizard',
-		defeats: 'paper',
+		defeats: ['paper', 'spock'],
 		classColors: 'bg-purple border-purple-b',
-		classPosition: 'top-1/2 left-0 -translate-y-1/2',
 		optionIcon: lizardIcon,
 	},
 	{
 		id: 5,
 		name: 'spock',
-		defeats: 'scissors',
+		defeats: ['scissors', 'rock'],
 		classColors: 'bg-light-blue border-light-blue-b',
-		classPosition: 'top-1/2 right-0 -translate-y-1/2',
 		optionIcon: spockIcon,
 	},
 ];
