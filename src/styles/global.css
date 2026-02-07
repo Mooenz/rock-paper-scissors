@@ -15,6 +15,7 @@
 	--color-dark-text: hsl(229, 25%, 31%);
 	--color-score-text: hsl(229, 64%, 46%);
 	--color-header-outline: hsl(246, 11%, 37%);
+	--color-line: hsl(213, 20%, 45%);
 }
 
 html,
@@ -25,4 +26,59 @@ body {
 
 .radial-gradient {
 	background: radial-gradient(circle at 50% 0%, hsl(214, 47%, 23%) 0%, hsl(237, 49%, 15%) 100%);
+}
+
+.animation-win::before {
+	content: '';
+	z-index: -1;
+	border-radius: 100%;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 1/1;
+	animation-name: ripple;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-delay: 0.3s;
+	position: absolute;
+	bottom: -50px;
+	right: 20%;
+}
+
+@keyframes ripple {
+	0% {
+		box-shadow:
+			0 0 #ffffff08,
+			0 0 0 20px #ffffff08,
+			0 0 0 60px #ffffff08,
+			0 0 0 100px #ffffff08;
+	}
+
+	to {
+		box-shadow:
+			0 0 0 20px #ffffff08,
+			0 0 0 60px #ffffff08,
+			0 0 0 100px #ffffff06,
+			0 0 0 140px #fff0;
+	}
+}
+
+@media (min-width: 1024px) {
+	@keyframes ripple {
+		0% {
+			box-shadow:
+				0 0 #ffffff08,
+				0 0 0 20px #ffffff08,
+				0 0 0 100px #ffffff08,
+				0 0 0 180px #ffffff08;
+		}
+
+		to {
+			box-shadow:
+				0 0 0 20px #ffffff08,
+				0 0 0 100px #ffffff08,
+				0 0 0 180px #ffffff06,
+				0 0 0 260px #fff0;
+		}
+	}
 }
